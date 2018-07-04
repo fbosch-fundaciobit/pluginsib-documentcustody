@@ -20,7 +20,7 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <!-- reuse src/test/java code from plugin-documentcustody-api  -->
+       <!--reuse src/test/java code from plugin-documentcustody-api-->
       <groupId>org.fundaciobit.pluginsib.documentcustody</groupId>
       <artifactId>pluginsib-documentcustody-api</artifactId>
       <version>4.0.0</version>
