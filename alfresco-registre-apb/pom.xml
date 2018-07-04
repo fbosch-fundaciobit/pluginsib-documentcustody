@@ -1,77 +1,59 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.fundaciobit.plugins</groupId>
-  <artifactId>plugin-documentcustody-alfresco-apb</artifactId>
-  <version>3.0.0</version>
+  <groupId>org.fundaciobit.pluginsib.documentcustody</groupId>
+  <artifactId>pluginsib-documentcustody-alfresco-apb</artifactId>
+  <version>4.0.0</version>
   <packaging>jar</packaging>
-
-  <name>FundacioBit Plugins - Document Custody - Alfresco_Registre3_APB</name>
-
+  <name>PluginsIB - Document Custody - Alfresco_Registre3_APB</name>
   <parent>
-    <groupId>org.fundaciobit.plugins</groupId>
-    <artifactId>plugins-documentcustody</artifactId>
-    <version>3.0.0</version>
+    <groupId>org.fundaciobit.pluginsib.documentcustody</groupId>
+    <artifactId>pluginsib-documentcustody</artifactId>
+    <version>4.0.0</version>
   </parent>
-
   <url>http://maven.apache.org</url>
-  
   <dependencies>
-  
     <dependency>
-        <groupId>org.fundaciobit.plugins</groupId>
-        <artifactId>plugins-api</artifactId>
-        <version>1.0.0</version>
-        <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.fundaciobit.plugins</groupId>
-      <artifactId>plugin-documentcustody-api</artifactId>
-      <version>3.0.0</version>
+      <groupId>org.fundaciobit.pluginsib.documentcustody</groupId>
+      <artifactId>pluginsib-documentcustody-api</artifactId>
+      <version>4.0.0</version>
       <scope>provided</scope>
     </dependency>
-      
     <dependency>
       <!-- reuse src/test/java code from plugin-documentcustody-api  -->
-      <groupId>org.fundaciobit.plugins</groupId>
-      <artifactId>plugin-documentcustody-api</artifactId>
-      <version>3.0.0</version>
+      <groupId>org.fundaciobit.pluginsib.documentcustody</groupId>
+      <artifactId>pluginsib-documentcustody-api</artifactId>
+      <version>4.0.0</version>
       <scope>test</scope>
       <classifier>tests</classifier>
     </dependency>
-    
     <dependency>
-        <groupId>commons-io</groupId>
-        <artifactId>commons-io</artifactId>
-        <version>2.2</version>
-        <scope>provided</scope>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.2</version>
+      <scope>provided</scope>
     </dependency>
-
     <dependency>
       <groupId>org.apache.chemistry.opencmis</groupId>
       <artifactId>chemistry-opencmis-client-impl</artifactId>
       <version>0.9.0</version>
       <exclusions>
         <exclusion>
-        <groupId>com.sun.xml.ws</groupId>
-        <artifactId>jaxws-rt</artifactId>
+          <groupId>com.sun.xml.ws</groupId>
+          <artifactId>jaxws-rt</artifactId>
         </exclusion>
-      </exclusions>      
+      </exclusions>
     </dependency>
-   
     <dependency>
       <groupId>org.apache.chemistry.opencmis</groupId>
       <artifactId>chemistry-opencmis-client-bindings</artifactId>
       <version>0.9.0</version>
     </dependency>
-  
     <dependency>
       <groupId>org.alfresco.cmis.client</groupId>
       <artifactId>alfresco-opencmis-extension</artifactId>
       <version>1.0</version>
     </dependency>
-
     <dependency>
       <groupId>com.google.oauth-client</groupId>
       <artifactId>google-oauth-client</artifactId>
@@ -83,41 +65,34 @@
         </exclusion>
       </exclusions>
     </dependency>
-
     <dependency>
-    <groupId>com.google.http-client</groupId>
-    <artifactId>google-http-client-jackson</artifactId>
-    <version>1.16.0-rc</version>
-  </dependency>
-  
-  <dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-log4j12</artifactId>
-    <version>1.7.12</version>
-  </dependency>
-  
-  <dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-beans</artifactId>
-    <version>4.1.6.RELEASE</version>
-  </dependency>
-  
+      <groupId>com.google.http-client</groupId>
+      <artifactId>google-http-client-jackson</artifactId>
+      <version>1.16.0-rc</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.12</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-beans</artifactId>
+      <version>4.1.6.RELEASE</version>
+    </dependency>
   </dependencies>
-  
-  
   <build>
-  <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-      <version>3.1</version>
-            <configuration>
-               <source>1.6</source>
-               <target>1.6</target>
-               <compilerVersion>1.6</compilerVersion>
-            </configuration>
-         </plugin>
-     
-  </plugins>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <compilerVersion>1.6</compilerVersion>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
