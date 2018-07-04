@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  targetNamespace="http://www.caib.es.signatura.custodia"
+			xmlns:tns="http://www.caib.es.signatura.custodia"
+			xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="qualified"
+			attributeFormDefault="unqualified">
+
+    <xs:import namespace="urn:oasis:names:tc:dss:1.0:core:schema" schemaLocation="file:oasis-dss-core-schema-v1.0-os.xsd"/>
+	<!-- "http://docs.oasis-open.org/dss/v1.0/oasis-dss-core-schema-v1.0-os.xsd" /> -->
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+    <xs:element name="PurgadoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:Result" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ConsultaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:Result" maxOccurs="1"/>
+                <xs:element ref="tns:Documento" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="InformeResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:Result" minOccurs="1"/>
+                <xs:element ref="tns:Documento" minOccurs="0"/>
+                <xs:element ref="tns:ResultadosInformeAccion" minOccurs="0" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="RecuperacionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:Result" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="EliminacionResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:Result" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CustodiaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:VerifyResponse" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="VerifyResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:Result" maxOccurs="1" />
+                <xs:element ref="tns:OptionalOutputs" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Documento">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="CodigoExterno" type="xs:string" />
+                <xs:element name="Nombre" type="xs:string" />
+                <xs:element name="Clase" type="xs:string" />
+                <xs:element name="Tipo" type="xs:string" />
+                <xs:element name="AplicacionCustodia" type="xs:string" />
+                <xs:element name="RutaFichero" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="ResultadosInformeAccion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:ResultadoInformeAccion" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ResultadoInformeAccion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Accion" type="xs:string" />
+                <xs:element name="Fecha" type="xs:string" />
+                <xs:element name="Usuario" type="xs:string" />
+                <xs:element name="NombreDocumento" type="xs:string" />
+                <xs:element name="CodigoExternoDocumento" type="xs:string" />
+                <xs:element ref="dss:Result" minOccurs="0" />
+                <xs:element ref="tns:ResultadoFirmas" minOccurs="0" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="OptionalOutputs">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:ResultadoFirmas" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ResultadoFirmas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:ResultadoFirma" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="versionJerarquiaFirmas" type="xs:int" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ResultadoReglas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:ResultadoRegla" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ResultadoFirma">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nivel" type="xs:int" maxOccurs="1"/>
+                <xs:element name="orden" type="xs:int" maxOccurs="1"/>
+                <xs:element name="verificada" type="xs:boolean" maxOccurs="1"/>
+                <xs:element ref="tns:ValidacionCertificado" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="tns:ResultadoRegla" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element ref="tns:Sello" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Sello">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="tns:ValidacionCertificado" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="fecha" type="xs:string" use="required" />
+            <xs:attribute name="tipo" type="tns:TipoSello" use="required" />
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:simpleType name="TipoSello">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FIRMANTE"/>
+            <xs:enumeration value="CUSTODIA"/>
+            <xs:enumeration value="ARCHIVADO"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="ResultadoRegla">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ubicacion" type="xs:string"/>
+                <xs:element name="campo" type="xs:string"/>
+                <xs:element name="valor" type="xs:string"/>
+                <xs:element name="cumple" type="xs:boolean"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ValidacionCertificado">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="numeroSerie" type="xs:string" maxOccurs="1"/>
+                <xs:element name="subjectName" type="xs:string" maxOccurs="1"/>
+                <xs:element name="verificado" type="xs:boolean" maxOccurs="1"/>
+                <xs:element name="url" type="xs:anyURI" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="causa" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ReservaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="dss:Result" minOccurs="0" />
+                <xs:element name="Hash" type="xs:string" maxOccurs="1"/>
+                <xs:element name="Codigo" type="xs:string" maxOccurs="1"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

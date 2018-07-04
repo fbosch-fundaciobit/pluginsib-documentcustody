@@ -1,0 +1,145 @@
+
+# --------------------------------------------------
+# Específiques org.fundaciobit.plugins.documentcustody.arxiudigitalcaib.ArxiuDigitalCAIBDocumentCustodyPlugin
+
+# Requerit. Nom de l'expedient. Important: Ha de ser únic
+# Exemple 1 Expedient_${.now?string[\"yyyyMMddHHmmss\"]}
+# Exemple 2 Registre_<#if registro.origen??>S<#else>E</#if>_${registro.libro.codigo}_${.now?string[\"yyyy\"]}_${registro.numeroRegistro?string[\"0000000\"]}  
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.nom_expedient_EL=Registre_<#if registro.origen??>S<#else>E</#if>_${.now?string[\"yyyy\"]}_${registro.numeroRegistro?string[\"0000000\"]}
+
+# Opcional. Nom de la carpeta dins de l'expedient. 
+# Si carpeta no està definida llavors custodyID = {uuid_expedient}#{uuid_document}
+# Si carpeta està definida llavors custodyID =  {uuid_expedient}#{uuid_carpeta}#{uuid_document}
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.nom_carpeta_EL=Anexo_${anexo.id?string[\"000\"]}
+
+# Opcional. Per defecte sempre es crea Draft
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.createDraft_EL=true
+
+# Opcional. Per defecte false. Tanca l'expedient despres del primer guardat. Requereix "createDraft_EL=false" 
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.tancarExpedient_EL=false
+
+# Opcional. Si val false cerca si existeixen Expedients amb el mateix nom i els usa per 
+# guardar documents. Default value false.
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.searchifexpedientexistsinreserve=false
+
+# Opcional
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.debug=false
+
+
+# =================  DADES CONNEXIO ========================
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.url=https://afirmades.caib.es:4430/esb
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.login.username=USERNAME
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.login.password=PASSWORD
+
+
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.ignore_server_certificates=true
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.codi_aplicacio=Tests
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.organitzacio=CAIB
+
+# Ciutada (opcional)
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.solicitant.nom_EL=On_Obtenir_Nom_Ciutadà
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.solicitant.identificador_administratiu_EL=On_Obtenir_DNI_Ciutadà
+
+# Treballador (opcional)
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.usuari.username_EL=On_Obtenir_username_registrador
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.usuari.identificador_administratiu_EL=On_Obtenir_DNI_registrador
+
+# Nom procediment (opcional)
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.connexio.nom_procediment_EL=Subvenciones empleo
+
+
+
+# =================  METADADES OBLIGATORIES COMUNS ========================
+
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.serie_documental_EL=S0001
+#  Separats per comma
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.organs_EL=A04013511
+
+# ADMINISTRACION=1 //  CIUDADANO=0
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.origen_document_EL=${anexo.origenCiudadanoAdmin}
+
+
+# =================  METADADES OBLIGATORIES EXPEDIENT ========================
+
+# També inclou "Codigo Aplicacion" definit a la propietat "connexio.codi_aplicacio"
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.codi_procediment_EL=organo1_PRO_123456789
+
+
+# =================  METADADES OBLIGATORIES DOCUMENT ========================
+
+# També inclou "Codigo Aplicacion" definit a la propietat "connexio.codi_aplicacio"
+
+# EE01,EE02, EE03, EE04, EE99
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.estat_elaboracio_EL=<#switch anexo.validezDocumento><#case 1>EE99<#break><#case 2>EE99<#break><#case 3>EE03<#break><#case 4>EE01<#break><#default>EE99</#switch>
+
+# TIPO_DOC_ENI: TD01, TD02, TD03, ...
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.tipus_documental_EL=${anexo.tipoDocumental.codigoNTI}
+
+# Només es processa quan s'envia una firma
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.perfil_firma_EL=<#switch anexo.signProfile><#case "AdES-BES">BES<#break><#case "AdES-EPES">EPES<#break><#case "AdES-T">T<#break><#case "AdES-C">C<#break><#case "AdES-X">X<#break><#case "AdES-X1">X<#break><#case "AdES-X2">X<#break><#case "AdES-XL">XL<#break><#case "AdES-XL1">XL<#break><#case "AdES-XL2">XL<#break><#case "AdES-A">A<#break><#case "PAdES-LTV">LTV<#break><#case "PAdES-Basic">BES<#break></#switch>
+
+
+# --------------------------------------------------
+# Genèriques
+
+
+# Opcional. Configuració per generar Hash de la baseurl quan s'usa ${validationUrl_custodyID_Hash}
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.hash.password=mypass
+# Opcional. Configuració per generar Hash de la baseurl quan s'usa ${validationUrl_custodyID_Hash}
+#  MD2, MD5, SHA,SHA-256,SHA-384,SHA-512
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.hash.algorithm=MD5
+
+# Opcional. Servei Millorat per generar la URL de Custodia emprant EL.
+# Variables addicionals: csv, validationUrl_custodyID, validationUrl_custodyID_URLEncode i validationUrl_custodyID_Hash   
+# es.caib.portafib.plugins.documentcustody.arxiudigitalcaib.baseurl_EL=http://regweb3.fundaciobit.org/custody/${registro.url}
+
+# Opcional. Si no definit retorna el custodyID
+# Variables addicionals: csv
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.specialValue_EL=${registro.id}
+
+# ----------------------------------------------
+# Opcional. Metadades Automàtiques per Expedient
+# Nota: Només es permeten les definides en la classe es.caib.arxiudigital.apirest.constantes.MetadatosExpediente
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.expedient.automaticmetadata_items=1,2
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.expedient.automatic_metadata.1.name=eni:descripcion
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.expedient.automatic_metadata.1.valueEL=${registro.numeroRegistro?c} / ${registro.numeroRegistroFormateado}
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.expedient.automatic_metadata.2.name=eni:termino_punto_acceso
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.expedient.automatic_metadata.2.valueEL=Justificant
+
+
+# ----------------------------------------------
+# Opcional. Metadades Automàtiques per Document Electrònic
+# Nota: Només es permeten les definides en la classe es.caib.arxiudigital.apirest.constantes.MetadatosDocumento
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automaticmetadata_items=1,2
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.1.name=eni:descripcion
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.1.valueEL=${anexo.id} - ${anexo.titulo}
+
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.2.name=eni:origen
+es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.2.valueEL=${registro.origen}
+
+# REGISTRE
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.3.name=eni:tipo_asiento_registral
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.3.valueEL=${registro.???????????}
+
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.4.name=eni:codigo_oficina_registro
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.4.valueEL=${registro.???????????????}
+
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.5.name=eni:eni:fecha_asiento_registral
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.5.valueEL=<#setting time_zone='UTC'>${registro.fecha?string[\\"yyyy-MM-dd'T'HH:mm:ss.sss'Z'\\"]}
+
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.6.name=eni:numero_asiento_registral
+#es.caib.exemple.plugins.documentcustody.arxiudigitalcaib.documentelectronic.automatic_metadata.6.valueEL=${registro.numeroRegistro}
+
+
+

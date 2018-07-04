@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_33" class="java.beans.XMLDecoder"> 
+ <object class="es.caib.regweb3.model.RegistroEntrada"> 
+  <void property="destino"> 
+   <object id="Organismo0" class="es.caib.regweb3.model.Organismo"> 
+    <void property="codAmbComunidad"> 
+     <object id="CatComunidadAutonoma0" class="es.caib.regweb3.model.CatComunidadAutonoma"> 
+      <void property="codigoComunidad"> 
+       <long>4</long> 
+      </void> 
+      <void property="descripcionComunidad"> 
+       <string>Illes Balears</string> 
+      </void> 
+      <void property="id"> 
+       <long>40271</long> 
+      </void> 
+      <void property="pais"> 
+       <object class="es.caib.regweb3.model.CatPais"> 
+        <void property="codigoPais"> 
+         <long>724</long> 
+        </void> 
+        <void property="descripcionPais"> 
+         <string>España</string> 
+        </void> 
+        <void property="id"> 
+         <long>52665</long> 
+        </void> 
+       </object> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="codigo"> 
+     <string>A04009204</string> 
+    </void> 
+    <void property="denominacion"> 
+     <string>DIRECCIÓ GENERAL DE COORDINACIÓ DEL GOVERN</string> 
+    </void> 
+    <void property="entidad"> 
+     <object id="Entidad0" class="es.caib.regweb3.model.Entidad"> 
+      <void property="administradores"> 
+       <object id="PersistentSet0" class="org.hibernate.collection.PersistentSet"> 
+        <void property="owner"> 
+         <object idref="Entidad0"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="codigoDir3"> 
+       <string>A04006741</string> 
+      </void> 
+      <void property="colorMenu"> 
+       <string>ff9523</string> 
+      </void> 
+      <void property="configuracionPersona"> 
+       <long>1</long> 
+      </void> 
+      <void property="descripcion"> 
+       <string>A04006741</string> 
+      </void> 
+      <void property="diasVisado"> 
+       <int>1</int> 
+      </void> 
+      <void property="id"> 
+       <long>52708</long> 
+      </void> 
+      <void property="logoMenu"> 
+       <object id="Archivo0" class="es.caib.regweb3.model.Archivo"> 
+        <void property="id"> 
+         <long>52852</long> 
+        </void> 
+        <void property="mime"> 
+         <string>image/png</string> 
+        </void> 
+        <void property="nombre"> 
+         <string>campos_cap.png</string> 
+        </void> 
+        <void property="tamano"> 
+         <long>7502</long> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="logoSello"> 
+       <object id="Archivo1" class="es.caib.regweb3.model.Archivo"> 
+        <void property="id"> 
+         <long>52906</long> 
+        </void> 
+        <void property="mime"> 
+         <string>image/jpeg</string> 
+        </void> 
+        <void property="nombre"> 
+         <string>plano.jpg</string> 
+        </void> 
+        <void property="tamano"> 
+         <long>68317</long> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="nombre"> 
+       <string>CAIB</string> 
+      </void> 
+      <void property="numRegistro"> 
+       <string>${numLlibre}-${tipusRegistre}-${numRegistre}/${anyRegistre}</string> 
+      </void> 
+      <void property="organismos"> 
+       <object id="PersistentBag0" class="org.hibernate.collection.PersistentBag"> 
+        <void property="owner"> 
+         <object idref="Entidad0"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void id="Boolean0" property="activo"/> 
+      <void property="propietario"> 
+       <object id="Usuario0" class="es.caib.regweb3.model.Usuario"> 
+        <void property="apellido1"> 
+         <string>Nadal</string> 
+        </void> 
+        <void property="apellido2"> 
+         <string>Bennasar</string> 
+        </void> 
+        <void property="documento"> 
+         <string>43096845C</string> 
+        </void> 
+        <void property="email"> 
+         <string>anadal@fundaciobit.org</string> 
+        </void> 
+        <void property="id"> 
+         <long>1</long> 
+        </void> 
+        <void property="identificador"> 
+         <string>anadal</string> 
+        </void> 
+        <void property="idioma"> 
+         <long>1</long> 
+        </void> 
+        <void property="nombre"> 
+         <string>Antoni</string> 
+        </void> 
+        <void property="rwe_admin"> 
+         <object idref="Boolean0"/> 
+        </void> 
+        <void property="rwe_superadmin"> 
+         <object idref="Boolean0"/> 
+        </void> 
+        <void property="rwe_usuari"> 
+         <object idref="Boolean0"/> 
+        </void> 
+        <void property="tipoUsuario"> 
+         <long>1</long> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="sello"> 
+       <string>${nomOficina}&#13;
+Núm: ${formatNumRegistre}&#13;
+Data: ${dataRegistre}&#13;
+Origen/Destinatari: ${origen}${destinatari}</string> 
+      </void> 
+      <void property="textoPie"> 
+       <string></string> 
+      </void> 
+      <void property="tipoScan"> 
+       <string>0</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="estado"> 
+     <object id="CatEstadoEntidad0" class="es.caib.regweb3.model.CatEstadoEntidad"> 
+      <void property="codigoEstadoEntidad"> 
+       <string>V</string> 
+      </void> 
+      <void property="descripcionEstadoEntidad"> 
+       <string>Vigente</string> 
+      </void> 
+      <void property="id"> 
+       <long>40013</long> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="historicoUO"> 
+     <object class="org.hibernate.collection.PersistentSet"> 
+      <void property="owner"> 
+       <object idref="Organismo0"/> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="id"> 
+     <long>52725</long> 
+    </void> 
+    <void property="libros"> 
+     <object class="org.hibernate.collection.PersistentBag"> 
+      <void property="owner"> 
+       <object idref="Organismo0"/> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nivelAdministracion"> 
+     <object id="CatNivelAdministracion0" class="es.caib.regweb3.model.CatNivelAdministracion"> 
+      <void property="codigoNivelAdministracion"> 
+       <long>2</long> 
+      </void> 
+      <void property="descripcionNivelAdministracion"> 
+       <string>Administración Autonómica</string> 
+      </void> 
+      <void property="id"> 
+       <long>40015</long> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nivelJerarquico"> 
+     <long>3</long> 
+    </void> 
+    <void property="organismoRaiz"> 
+     <object id="Organismo1" class="es.caib.regweb3.model.Organismo"> 
+      <void property="codAmbComunidad"> 
+       <object idref="CatComunidadAutonoma0"/> 
+      </void> 
+      <void property="codigo"> 
+       <string>A04006741</string> 
+      </void> 
+      <void property="denominacion"> 
+       <string>PRESIDENCIA DEL GOVERN DE LES ILLES BALEARS</string> 
+      </void> 
+      <void property="entidad"> 
+       <object idref="Entidad0"/> 
+      </void> 
+      <void property="estado"> 
+       <object idref="CatEstadoEntidad0"/> 
+      </void> 
+      <void property="historicoUO"> 
+       <object class="org.hibernate.collection.PersistentSet"> 
+        <void property="owner"> 
+         <object idref="Organismo1"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="id"> 
+       <long>52709</long> 
+      </void> 
+      <void property="libros"> 
+       <object class="org.hibernate.collection.PersistentBag"> 
+        <void property="owner"> 
+         <object idref="Organismo1"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="nivelAdministracion"> 
+       <object idref="CatNivelAdministracion0"/> 
+      </void> 
+      <void property="nivelJerarquico"> 
+       <long>1</long> 
+      </void> 
+      <void property="organismoRaiz"> 
+       <object idref="Organismo1"/> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="organismoSuperior"> 
+     <object id="Organismo2" class="es.caib.regweb3.model.Organismo"> 
+      <void property="codAmbComunidad"> 
+       <object idref="CatComunidadAutonoma0"/> 
+      </void> 
+      <void property="codAmbProvincia"> 
+       <object class="es.caib.regweb3.m
+2015-10-07 11:24:59,757 INFO  [STDOUT] (http-0.0.0.0-8080-1) odel.CatProvincia"> 
+        <void property="codigoProvincia"> 
+         <long>7</long> 
+        </void> 
+        <void property="comunidadAutonoma"> 
+         <object idref="CatComunidadAutonoma0"/> 
+        </void> 
+        <void property="descripcionProvincia"> 
+         <string>Illes Balears</string> 
+        </void> 
+        <void property="id"> 
+         <long>40293</long> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="codigo"> 
+       <string>A04009750</string> 
+      </void> 
+      <void property="denominacion"> 
+       <string>CONSELLERIA DE PRESIDENCIA</string> 
+      </void> 
+      <void property="entidad"> 
+       <object idref="Entidad0"/> 
+      </void> 
+      <void property="estado"> 
+       <object idref="CatEstadoEntidad0"/> 
+      </void> 
+      <void property="historicoUO"> 
+       <object class="org.hibernate.collection.PersistentSet"> 
+        <void property="owner"> 
+         <object idref="Organismo2"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="id"> 
+       <long>52711</long> 
+      </void> 
+      <void property="libros"> 
+       <object class="org.hibernate.collection.PersistentBag"> 
+        <void property="owner"> 
+         <object idref="Organismo2"/> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="nivelAdministracion"> 
+       <object idref="CatNivelAdministracion0"/> 
+      </void> 
+      <void property="nivelJerarquico"> 
+       <long>2</long> 
+      </void> 
+      <void property="organismoRaiz"> 
+       <object idref="Organismo1"/> 
+      </void> 
+      <void property="organismoSuperior"> 
+       <object idref="Organismo1"/> 
+      </void> 
+     </object> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="estado"> 
+   <long>1</long> 
+  </void> 
+  <void property="fecha"> 
+   <object class="java.sql.Timestamp"> 
+    <long>1444207506498</long> 
+   </object> 
+  </void> 
+  <void property="id"> 
+   <long>53767</long> 
+  </void> 
+  <void property="libro"> 
+   <object class="es.caib.regweb3.model.Libro"> 
+    <void property="codigo"> 
+     <string>LLAT</string> 
+    </void> 
+    <void property="contadorEntrada"> 
+     <object class="es.caib.regweb3.model.Contador"> 
+      <void property="id"> 
+       <long>52825</long> 
+      </void> 
+      <void property="numero"> 
+       <int>7</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="contadorOficioRemision"> 
+     <object class="es.caib.regweb3.model.Contador"> 
+      <void property="id"> 
+       <long>52827</long> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="contadorSalida"> 
+     <object class="es.caib.regweb3.model.Contador"> 
+      <void property="id"> 
+       <long>52826</long> 
+      </void> 
+      <void property="numero"> 
+       <int>1</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="id"> 
+     <long>52828</long> 
+    </void> 
+    <void property="nombre"> 
+     <string>Llibre Agencia tributaria</string> 
+    </void> 
+    <void property="organismo"> 
+     <object idref="Organismo2"/> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="numeroRegistro"> 
+   <int>7</int> 
+  </void> 
+  <void property="numeroRegistroFormateado"> 
+   <string>LLAT-E-7/2015</string> 
+  </void> 
+  <void property="oficina"> 
+   <object id="Oficina0" class="es.caib.regweb3.model.Oficina"> 
+    <void property="codigo"> 
+     <string>O00015093</string> 
+    </void> 
+    <void property="denominacion"> 
+     <string>OFICINA PRESIDENCIA DEL GOVERN</string> 
+    </void> 
+    <void property="estado"> 
+     <object idref="CatEstadoEntidad0"/> 
+    </void> 
+    <void property="id"> 
+     <long>52813</long> 
+    </void> 
+    <void property="organismoResponsable"> 
+     <object idref="Organismo2"/> 
+    </void> 
+    <void property="organizativasOfi"> 
+     <object class="org.hibernate.collection.PersistentSet"> 
+      <void property="owner"> 
+       <object idref="Oficina0"/> 
+      </void> 
+     </object> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="registroDetalle"> 
+   <object class="es.caib.regweb3.model.RegistroDetalle"> 
+    <void property="expediente"> 
+     <string></string> 
+    </void> 
+    <void property="extracto"> 
+     <string>dfghdfhgjfdghdfgh</string> 
+    </void> 
+    <void property="fechaOrigen"> 
+     <object class="java.sql.Timestamp"> 
+      <long>1444207506498</long> 
+     </object> 
+    </void> 
+    <void property="id"> 
+     <long>53766</long> 
+    </void> 
+    <void property="idioma"> 
+     <long>1</long> 
+    </void> 
+    <void property="interesados"> 
+     <void method="add"> 
+      <object class="es.caib.regweb3.model.Interesado"> 
+       <void property="codigoDir3"> 
+        <string>A04009204</string> 
+       </void> 
+       <void property="documento"> 
+        <string>A04009204</string> 
+       </void> 
+       <void property="id"> 
+        <long>53765</long> 
+       </void> 
+       <void property="nombre"> 
+        <string>DIRECCIÓ GENERAL DE COORDINACIÓ DEL GOVERN</string> 
+       </void> 
+       <void property="tipo"> 
+        <long>1</long> 
+       </void> 
+       <void property="tipoDocumentoIdentificacion"> 
+        <long>6</long> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+    <void property="numeroRegistroOrigen"> 
+     <string>LLAT-E-7/2015</string> 
+    </void> 
+    <void property="numeroTransporte"> 
+     <string></string> 
+    </void> 
+    <void property="observaciones"> 
+     <string></string> 
+    </void> 
+    <void property="referenciaExterna"> 
+     <string></string> 
+    </void> 
+    <void property="tipoAsunto"> 
+     <object class="es.caib.regweb3.model.TipoAsunto"> 
+      <void property="codigo"> 
+       <string>AS09</string> 
+      </void> 
+      <void property="entidad"> 
+       <object idref="Entidad0"/> 
+      </void> 
+      <void property="id"> 
+       <long>52836</long> 
+      </void> 
+      <void property="traducciones"> 
+       <void method="put"> 
+        <string>ca</string> 
+        <object class="es.caib.regweb3.model.TraduccionTipoAsunto"> 
+         <void property="nombre"> 
+          <string>As09</string> 
+         </void> 
+        </object> 
+       </void> 
+       <void method="put"> 
+        <string>es</string> 
+        <object class="es.caib.regweb3.model.TraduccionTipoAsunto"> 
+         <void property="nombre"> 
+          <string>AS09</string> 
+         </void> 
+        </object> 
+       </void> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="tipoDocumentacionFisica"> 
+     <long>1</long> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="usuario"> 
+   <object class="es.caib.regweb3.model.UsuarioEntidad"> 
+    <void property="entidad"> 
+     <object idref="Entidad0"/> 
+    </void> 
+    <void property="id"> 
+     <long>52824</long> 
+    </void> 
+    <void property="ultimaOficina"> 
+     <object idref="Oficina0"/> 
+    </void> 
+    <void property="usuario"> 
+     <object idref="Usuario0"/> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+ <object class="es.caib.regweb3.model.Anexo"> 
+  <void property="custodiaID"> 
+   <string></string> 
+  </void> 
+  <void property="fechaCaptura"> 
+   <object class="java.util.Date"> 
+    <long>1444209899350</long> 
+   </object> 
+  </void> 
+  <void property="observaciones"> 
+   <string></string> 
+  </void> 
+  <void property="origenCiudadanoAdmin"> 
+   <int>0</int> 
+  </void> 
+  <void property="tipoDocumental"> 
+   <object class="es.caib.regweb3.model.TipoDocumental"> 
+    <void property="codigoNTI"> 
+     <string>NTI099</string> 
+    </void> 
+    <void property="entidad"> 
+     <object class="es.caib.regweb3.model.Entidad"> 
+      <void property="administradores"> 
+       <object idref="PersistentSet0"/> 
+      </void> 
+      <void property="codigoDir3"> 
+       <string>A04006741</string> 
+      </void> 
+      <void property="colorMenu"> 
+       <string>ff9523</string> 
+      </void> 
+      <void property="configuracionPersona"> 
+       <long>1</long> 
+      </void> 
+      <void property="descripcion"> 
+       <string>A04006741</string> 
+      </void> 
+      <void property="diasVisado"> 
+       <int>1</int> 
+      </void> 
+      <void property="id"> 
+       <long>52708</long> 
+      </void> 
+      <
+2015-10-07 11:24:59,800 INFO  [STDOUT] (http-0.0.0.0-8080-1) void property="logoMenu"> 
+       <object idref="Archivo0"/> 
+      </void> 
+      <void property="logoSello"> 
+       <object idref="Archivo1"/> 
+      </void> 
+      <void property="nombre"> 
+       <string>CAIB</string> 
+      </void> 
+      <void property="numRegistro"> 
+       <string>${numLlibre}-${tipusRegistre}-${numRegistre}/${anyRegistre}</string> 
+      </void> 
+      <void property="organismos"> 
+       <object idref="PersistentBag0"/> 
+      </void> 
+      <void property="propietario"> 
+       <object idref="Usuario0"/> 
+      </void> 
+      <void property="sello"> 
+       <string>${nomOficina}&#13;
+Núm: ${formatNumRegistre}&#13;
+Data: ${dataRegistre}&#13;
+Origen/Destinatari: ${origen}${destinatari}</string> 
+      </void> 
+      <void property="textoPie"> 
+       <string></string> 
+      </void> 
+      <void property="tipoScan"> 
+       <string>0</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="id"> 
+     <long>52844</long> 
+    </void> 
+    <void property="traducciones"> 
+     <void method="put"> 
+      <string>ca</string> 
+      <object class="es.caib.regweb3.model.TraduccionTipoDocumental"> 
+       <void property="nombre"> 
+        <string>NTI099</string> 
+       </void> 
+      </object> 
+     </void> 
+     <void method="put"> 
+      <string>es</string> 
+      <object class="es.caib.regweb3.model.TraduccionTipoDocumental"> 
+       <void property="nombre"> 
+        <string>NTI099</string> 
+       </void> 
+      </object> 
+     </void> 
+    </void> 
+   </object> 
+  </void> 
+  <void property="tipoDocumento"> 
+   <long>1</long> 
+  </void> 
+  <void property="titulo"> 
+   <string>XXXXXXXXXXXXXX</string> 
+  </void> 
+  <void property="validezDocumento"> 
+   <long>1</long> 
+  </void> 
+ </object> 
+</java> 

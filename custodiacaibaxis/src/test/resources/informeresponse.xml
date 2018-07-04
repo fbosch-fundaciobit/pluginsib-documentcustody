@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inf:InformeResponse xmlns:inf="http://www.caib.es.signatura.custodia">
+	<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+		<dss:ResultMajor>Success</dss:ResultMajor>
+		<dss:ResultMinor></dss:ResultMinor>
+		<dss:ResultMessage xml:lang="es"></dss:ResultMessage>
+	</dss:Result>
+	<inf:Documento>
+		<inf:CodigoExterno>Prova_1400146772038</inf:CodigoExterno>
+		<inf:Nombre>hola_dnie.pdf</inf:Nombre>
+		<inf:Clase>PDF_FIRMADO</inf:Clase>
+		<inf:Tipo>application/pdf</inf:Tipo>
+		<inf:AplicacionCustodia>valcust</inf:AplicacionCustodia>
+		<inf:RutaFichero>valcust/application/pdf/2014/05/Prova_1400146772038
+		</inf:RutaFichero>
+	</inf:Documento>
+	<inf:ResultadosInformeAccion>
+		<inf:ResultadoInformeAccion>
+			<inf:Accion>CUSTODIA</inf:Accion>
+			<inf:Fecha>15/05/2014 11:39</inf:Fecha>
+			<inf:Usuario>valcust</inf:Usuario>
+			<inf:NombreDocumento>hola_dnie.pdf</inf:NombreDocumento>
+			<inf:CodigoExternoDocumento>Prova_1400146772038
+			</inf:CodigoExternoDocumento>
+			<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+				<dss:ResultMajor>Success</dss:ResultMajor>
+				<dss:ResultMinor>Archive</dss:ResultMinor>
+				<dss:ResultMessage xml:lang="es"></dss:ResultMessage>
+			</dss:Result>
+			<inf:ResultadoFirmas versionJerarquiaFirmas="4">
+				<inf:ResultadoFirma>
+					<inf:nivel>1</inf:nivel>
+					<inf:orden>1</inf:orden>
+					<inf:verificada>true</inf:verificada>
+					<inf:ValidacionCertificado>
+						<inf:numeroSerie>165203632196137237732773294447868922019
+						</inf:numeroSerie>
+						<inf:subjectName>C=ES,O=DIRECCION GENERAL DE LA
+							POLICIA,OU=DNIE,CN=AC DNIE 003</inf:subjectName>
+						<inf:verificado>true</inf:verificado>
+						<inf:url>http://ocsp.dnie.es</inf:url>
+					</inf:ValidacionCertificado>
+					<inf:ValidacionCertificado>
+						<inf:numeroSerie>1174437250</inf:numeroSerie>
+						<inf:subjectName>C=ES,SERIALNUMBER=43096845C,SURNAME=NADAL,GIVENNAME=ANTONI,CN=NADAL
+							BENNASAR\, ANTONI (FIRMA)</inf:subjectName>
+						<inf:verificado>true</inf:verificado>
+						<inf:url>http://ocsp.dnie.es</inf:url>
+					</inf:ValidacionCertificado>
+				</inf:ResultadoFirma>
+			</inf:ResultadoFirmas>
+		</inf:ResultadoInformeAccion>
+		<inf:ResultadoInformeAccion>
+			<inf:Accion>SELLADO_PENDIENTE</inf:Accion>
+			<inf:Fecha>16/05/2014 09:24</inf:Fecha>
+			<inf:Usuario>TAREA_SELLADO_PENDIENTE_16/05/2014</inf:Usuario>
+			<inf:NombreDocumento></inf:NombreDocumento>
+			<inf:CodigoExternoDocumento>Prova_1400146772038
+			</inf:CodigoExternoDocumento>
+			<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+				<dss:ResultMajor>ResponderError</dss:ResultMajor>
+				<dss:ResultMinor>ERROR_CONSTRUYENDO_CADES CadES-T</dss:ResultMinor>
+				<dss:ResultMessage xml:lang="es">null;
+					CausedByException is:
+					No existe ninguna URL de sellado activa </dss:ResultMessage>
+			</dss:Result>
+		</inf:ResultadoInformeAccion>
+		<inf:ResultadoInformeAccion>
+			<inf:Accion>SELLADO_PENDIENTE</inf:Accion>
+			<inf:Fecha>17/05/2014 09:24</inf:Fecha>
+			<inf:Usuario>TAREA_SELLADO_PENDIENTE_17/05/2014</inf:Usuario>
+			<inf:NombreDocumento></inf:NombreDocumento>
+			<inf:CodigoExternoDocumento>Prova_1400146772038
+			</inf:CodigoExternoDocumento>
+			<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+				<dss:ResultMajor>ResponderError</dss:ResultMajor>
+				<dss:ResultMinor>ERROR_CONSTRUYENDO_CADES CadES-T</dss:ResultMinor>
+				<dss:ResultMessage xml:lang="es">null;
+					CausedByException is:
+					No existe ninguna URL de sellado activa </dss:ResultMessage>
+			</dss:Result>
+		</inf:ResultadoInformeAccion>
+		<inf:ResultadoInformeAccion>
+			<inf:Accion>SELLADO_PENDIENTE</inf:Accion>
+			<inf:Fecha>18/05/2014 09:24</inf:Fecha>
+			<inf:Usuario>TAREA_SELLADO_PENDIENTE_18/05/2014</inf:Usuario>
+			<inf:NombreDocumento></inf:NombreDocumento>
+			<inf:CodigoExternoDocumento>Prova_1400146772038
+			</inf:CodigoExternoDocumento>
+			<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+				<dss:ResultMajor>ResponderError</dss:ResultMajor>
+				<dss:ResultMinor>ERROR_CONSTRUYENDO_CADES CadES-T</dss:ResultMinor>
+				<dss:ResultMessage xml:lang="es">null;
+					CausedByException is:
+					No existe ninguna URL de sellado activa </dss:ResultMessage>
+			</dss:Result>
+		</inf:ResultadoInformeAccion>
+		<inf:ResultadoInformeAccion>
+			<inf:Accion>SELLADO_PENDIENTE</inf:Accion>
+			<inf:Fecha>19/05/2014 10:24</inf:Fecha>
+			<inf:Usuario>TAREA_SELLADO_PENDIENTE_19/05/2014</inf:Usuario>
+			<inf:NombreDocumento></inf:NombreDocumento>
+			<inf:CodigoExternoDocumento>Prova_1400146772038
+			</inf:CodigoExternoDocumento>
+			<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+				<dss:ResultMajor>ResponderError</dss:ResultMajor>
+				<dss:ResultMinor>ERROR_CONSTRUYENDO_CADES CadES-T</dss:ResultMinor>
+				<dss:ResultMessage xml:lang="es">null;
+					CausedByException is:
+					No existe ninguna URL de sellado activa </dss:ResultMessage>
+			</dss:Result>
+		</inf:ResultadoInformeAccion>
+		<inf:ResultadoInformeAccion>
+			<inf:Accion>SELLADO_PENDIENTE</inf:Accion>
+			<inf:Fecha>20/05/2014 10:24</inf:Fecha>
+			<inf:Usuario>TAREA_SELLADO_PENDIENTE_20/05/2014</inf:Usuario>
+			<inf:NombreDocumento></inf:NombreDocumento>
+			<inf:CodigoExternoDocumento>Prova_1400146772038
+			</inf:CodigoExternoDocumento>
+			<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+				<dss:ResultMajor>ResponderError</dss:ResultMajor>
+				<dss:ResultMinor>ERROR_CONSTRUYENDO_CADES CadES-T</dss:ResultMinor>
+				<dss:ResultMessage xml:lang="es">null;
+					CausedByException is:
+					No existe ninguna URL de sellado activa </dss:ResultMessage>
+			</dss:Result>
+		</inf:ResultadoInformeAccion>
+	</inf:ResultadosInformeAccion>
+</inf:InformeResponse>

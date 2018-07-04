@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_33" class="java.beans.XMLDecoder"> 
+ <object class="java.util.HashMap"> 
+  <void method="put"> 
+   <string>k2</string> 
+   <object class="java.util.ArrayList"> 
+    <void method="add"> 
+     <object class="org.fundaciobit.plugins.utils.Metadata"> 
+      <void property="key"> 
+       <string>k2</string> 
+      </void> 
+      <void property="metadataType"> 
+       <object class="org.fundaciobit.plugins.utils.MetadataType" method="valueOf"> 
+        <string>INTEGER</string> 
+       </object> 
+      </void> 
+      <void property="value"> 
+       <string>12</string> 
+      </void> 
+     </object> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

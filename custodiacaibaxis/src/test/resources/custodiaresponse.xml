@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cus:CustodiaResponse xmlns:cus="http://www.caib.es.signatura.custodia">
+	<dss:VerifyResponse xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema"
+		Profile="urn:oasis:names:tc:dss:1.0:profiles:CAdES">
+		<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+			<dss:ResultMajor>Success</dss:ResultMajor>
+			<dss:ResultMinor>Archive</dss:ResultMinor>
+			<dss:ResultMessage xml:lang="es"></dss:ResultMessage>
+		</dss:Result>
+		<dss:OptionalOutputs>
+			<cus:ResultadoFirmas versionJerarquiaFirmas="4">
+				<cus:ResultadoFirma>
+					<cus:nivel>1</cus:nivel>
+					<cus:orden>1</cus:orden>
+					<cus:verificada>true</cus:verificada>
+					<cus:ValidacionCertificado>
+						<cus:numeroSerie>1174437250</cus:numeroSerie>
+						<cus:subjectName>C=ES,SERIALNUMBER=43096845C,SURNAME=NADAL,GIVENNAME=ANTONI,CN=NADAL BENNASAR\, ANTONI (FIRMA)</cus:subjectName>
+						<cus:verificado>true</cus:verificado>
+						<cus:url>http://ocsp.dnie.es</cus:url>
+					</cus:ValidacionCertificado>
+					<cus:ValidacionCertificado>
+						<cus:numeroSerie>165203632196137237732773294447868922019</cus:numeroSerie>
+						<cus:subjectName>C=ES,O=DIRECCION GENERAL DE LA	POLICIA,OU=DNIE,CN=AC DNIE 003</cus:subjectName>
+						<cus:verificado>true</cus:verificado>
+						<cus:url>http://ocsp.dnie.es</cus:url>
+					</cus:ValidacionCertificado>
+				</cus:ResultadoFirma>
+			</cus:ResultadoFirmas>
+		</dss:OptionalOutputs>
+	</dss:VerifyResponse>
+</cus:CustodiaResponse>
+     

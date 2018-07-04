@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:ConsultaResponse xmlns:con="http://www.caib.es.signatura.custodia">
+	<dss:Result xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema">
+		<dss:ResultMajor>RequesterError</dss:ResultMajor>
+		<dss:ResultMinor>DOCUMENTO_NO_ENCONTRADO</dss:ResultMinor>
+		<dss:ResultMessage xml:lang="es">No se encuentra el
+			documento con codigo PORTAFIB1400576499396 para la aplicacion valcust
+		</dss:ResultMessage>
+	</dss:Result>
+</con:ConsultaResponse>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_33" class="java.beans.XMLDecoder"> 
+ <object class="java.util.ArrayList"> 
+  <void method="add"> 
+   <string>624839770629068_624839855282562</string> 
+  </void> 
+  <void method="add"> 
+   <string>624839770629068_624840362780564</string> 
+  </void> 
+ </object> 
+</java> 

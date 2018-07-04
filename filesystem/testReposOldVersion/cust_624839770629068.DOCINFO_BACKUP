@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.6.0_33" class="java.beans.XMLDecoder"> 
+ <object class="org.fundaciobit.plugins.documentcustody.DocumentCustody"> 
+  <void property="documentType"> 
+   <string>none</string> 
+  </void> 
+  <void property="name"> 
+   <string>holacaracola.txt</string> 
+  </void> 
+ </object> 
+</java> 

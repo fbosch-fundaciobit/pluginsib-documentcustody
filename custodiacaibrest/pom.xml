@@ -1,0 +1,187 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.fundaciobit.plugins</groupId>
+  <artifactId>plugin-documentcustody-custodiacaibrest</artifactId>
+  <packaging>jar</packaging>
+  <version>2.0.0</version>
+
+  <name>FundacioBit Plugins - Document Custody - CustodiaCaibRest</name>
+
+  <parent>
+	<groupId>org.fundaciobit.plugins</groupId>
+	<version>2.0.0</version>
+	<artifactId>plugins-documentcustody</artifactId>
+  </parent>
+
+  <url>http://maven.apache.org</url>
+
+  <dependencies>
+  
+	<dependency>
+        <groupId>org.fundaciobit.plugins</groupId>
+        <artifactId>plugins-api</artifactId>
+        <version>1.0.0</version>
+        <scope>provided</scope>
+	</dependency>
+    
+      <dependency>
+      <groupId>org.fundaciobit.plugins</groupId>
+      <artifactId>plugin-documentcustody-api</artifactId>
+      <version>2.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+      
+    <dependency>
+      <!-- reuse src/test/java code from plugin-documentcustody-api  -->
+      <groupId>org.fundaciobit.plugins</groupId>
+      <artifactId>plugin-documentcustody-api</artifactId>
+      <version>2.0.0</version>
+      <scope>test</scope>
+      <classifier>tests</classifier>
+    </dependency>
+    
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.2</version>
+        <scope>provided</scope>
+    </dependency>
+	
+	<dependency>
+		<artifactId>valcert-client-rest</artifactId>
+		<groupId>es.caib.signatura.cliente</groupId>
+		<version>2.0.19</version>
+		<scope>system</scope>
+		<systemPath>${basedir}/lib/valcert-client-rest-2.0.19.jar</systemPath>
+	</dependency>
+	
+    <dependency>
+		<artifactId>valcert-sar-rest</artifactId>
+		<groupId>es.caib.signatura.cliente</groupId>
+		<version>2.0.19</version>
+		<scope>system</scope>
+		<systemPath>${basedir}/lib/valcert-sar-rest-2.0.19-jar.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.atlassian.jira</groupId>
+		<artifactId>jira-rest-java-client</artifactId>
+		<version>2.0.0-m2</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.jboss.logging</groupId>
+		<artifactId>jboss-logging</artifactId>
+		<version>3.1.0.GA</version> <!--  -->
+	</dependency>
+	
+	
+			<dependency>
+			<groupId>bouncycastle</groupId>
+			<artifactId>bcprov-jdk14</artifactId>
+			<version>140</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.12</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jboss-system</artifactId>
+			<version>3.2.8-5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jboss-jmx</artifactId>
+			<version>3.2.8-5</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+	<groupId>concurrent</groupId>
+	<artifactId>concurrent</artifactId>
+	<version>1.3.3</version>
+</dependency>
+	
+	<!-- -->
+	<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jboss-system</artifactId>
+			<version>3.2.8-5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jboss-jmx</artifactId>
+			<version>3.2.8-5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>axis-ws4ee</artifactId>
+			<version>4.03RC1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jboss-jaxrpc</artifactId>
+			<version>3.2.8-5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>jboss</groupId>
+			<artifactId>jboss-net</artifactId>
+			<version>3.2.8-5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>bouncycastle</groupId>
+			<artifactId>bcmail-jdk14</artifactId>
+			<version>139</version>
+		</dependency>
+		<!--
+		<dependency>
+			<groupId>bouncycastle</groupId>
+			<artifactId>bcprov-jdk14</artifactId>
+			<version>140</version>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>bouncycastle</groupId>
+			<artifactId>bctsp-jdk14</artifactId>
+			<version>139</version>
+		</dependency>
+  <!--  -->
+	
+	
+	
+
+  </dependencies>
+  
+  
+  <build>
+  <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+			<version>3.1</version>
+            <configuration>
+               <source>1.6</source>
+               <target>1.6</target>
+               <compilerVersion>1.6</compilerVersion>
+            </configuration>
+         </plugin>
+  </plugins>
+  </build>
+</project>
