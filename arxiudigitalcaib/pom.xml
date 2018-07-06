@@ -28,10 +28,22 @@
       <classifier>tests</classifier>
     </dependency>
     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.14</version>
+      <scope>provided</scope>
+    </dependency>
+    <!--XXX<dependency>
       <groupId>es.caib.arxiudigital</groupId>
       <artifactId>arxiudigital-apirest</artifactId>
       <version>1.0.7</version>
-    </dependency>
+    </dependency>-->
   </dependencies>
   <build>
     <plugins>
