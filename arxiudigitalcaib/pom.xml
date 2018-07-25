@@ -39,11 +39,11 @@
       <version>1.2.14</version>
       <scope>provided</scope>
     </dependency>
-    <!--XXX<dependency>
+    <dependency>
       <groupId>es.caib.arxiudigital</groupId>
       <artifactId>arxiudigital-apirest</artifactId>
-      <version>1.0.7</version>
-    </dependency>-->
+      <version>1.0.8</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
