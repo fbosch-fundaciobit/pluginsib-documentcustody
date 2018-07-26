@@ -12,8 +12,8 @@
     <module>alfresco</module>
     <module>alfresco-registre-apb</module>
     <module>arxiudigitalcaib</module>
-    <!--     <module>custodiacaibaxis</module>
-    <module>custodiacaibrest</module>	  -->
+    <!--<module>custodiacaibaxis</module>
+    <module>custodiacaibrest</module>-->
     </modules>
     <dependencies>
       <dependency>
